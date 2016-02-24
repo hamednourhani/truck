@@ -1,0 +1,125 @@
+.site-footer{
+	background-color: $grey3;
+	border-top : 2px solid $orang;
+	overflow : hidden;
+	@extend .def-box-shadow;
+	
+}
+div.footer-widget-area{
+	border-bottom : 1px solid $orang;
+
+	.footer-col1,
+	.footer-col2,
+	.footer-col3{
+		@include span-columns(12,12);
+		@include at-breakpoint($medium) {
+			@include span-columns(4,12);
+		}
+
+	}
+	.footer-col3{
+		@include at-breakpoint($medium) {
+			@include omega;
+		}
+	}
+	aside.widget{
+		font-size : 90%;
+		padding : 10px 20px;
+		margin-bottom : 20px;
+		p,h4,h3,span,a{
+			color : $white2;
+		}
+		.widgettitle{
+			
+			margin : 10px auto;
+			padding-bottom : 10px;
+			border-bottom : 1px solid $orang;
+		}
+	}
+	aside.widget_contact_info_widget{
+		i:before{
+		    margin-right: 10px;
+		    vertical-align: middle;
+		    font-size: 130%;
+		    
+		}
+	}
+
+}
+.credit-holder{
+	padding : 5px;
+	text-align : center;
+	min-height : 50px;
+	background-color: darken($orang,5%);
+
+	.socials{
+		float : none;
+		margin: 0px;
+		text-align : center;
+		display: block;
+		
+		padding : 5px;
+		@include at-breakpoint($medium) {
+			float : left;
+				display : inline-block;
+		}
+		li{
+			display : inline-block;
+		
+			.social-icon{
+				@extend .def-transition;
+				background: image-url("social-icons.png");
+				display: block;
+				width : 30px;
+				height : 30px;
+				&.facebook{
+					background-position: -0px 30px;
+					&:hover{
+						background-position: -0px 0px;
+					}
+				}
+				&.instagram{
+					background-position: -32px 30px;
+					&:hover{
+						background-position: -32px 0px;
+					}
+				}
+				&.linkedin{
+					background-position: -64px 30px;
+					&:hover{
+						background-position: -64px 0px;
+					}
+				}
+				&.gplus{
+					background-position: -96px 30px;
+					&:hover{
+						background-position: -96px 0px;
+					}
+				}
+			}
+		}
+
+	}
+	span.credit{
+		display: inline-block;
+		padding : 5px;
+		color : $white;
+		font-size :80%;
+		color : $orang;
+	}
+	span.site-holder{
+		
+		display: block;
+		text-align : center;
+
+		padding : 5px;
+		font-size :80%;
+		float : none;
+		color : $orang;
+		@include at-breakpoint($medium) {
+			float : right;
+				display: inline-block;
+
+		}
+	}
+}

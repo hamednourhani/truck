@@ -1,0 +1,59 @@
+
+div.footer-widget-area{
+	
+
+	.footer-col1,
+	.footer-col2,
+	.footer-col3{
+		@include span-columns(12,12);
+		@include at-breakpoint($medium) {
+			@include span-columns(4,12);
+			margin-right: auto;
+		}
+
+	}
+	.footer-col3{
+		@include at-breakpoint($medium) {
+			@include omega;
+		}
+	}
+	aside.widget{
+		font-size: 105%;
+	}
+	aside.widget_contact_info_widget{
+		
+		i:before{
+		    margin-right: auto;
+		    margin-left: 10px;
+		}
+	}
+	
+}
+.credit-holder{
+	text-align : center;
+
+	.socials{
+		float : none;
+		text-align : center;
+		display: block;
+		
+		@include at-breakpoint($medium) {
+			float : right;
+				display : inline-block;
+		}
+		
+	}
+	
+	span.site-holder{
+		
+		display: block;
+		text-align : center;
+
+		float : none;
+		@include at-breakpoint($medium) {
+			float : left;
+				display: inline-block;
+
+		}
+	}
+}

@@ -1,0 +1,152 @@
+/* main style */
+
+
+
+//-------------site-content-------------------
+.primary{
+ 	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(10,12);
+ 		margin-right: auto;
+ 	}
+ 	article.hentry{
+		.article-body{
+ 			.featured-image.single-image{
+ 				@include span-columns(12,12);
+			 	@include at-breakpoint($medium){
+			 		@include span-columns(4,12);
+			 		margin-right: auto;
+			 	}
+ 			}
+ 			.excerpt{
+				@include span-columns(12,12);
+			 	@include at-breakpoint($medium){
+			 		@include span-columns(8 omega,12);
+			 		margin-right: auto;
+			 	}
+ 			}
+ 		}
+		ul.pharmacy-information-list{
+			i:before{
+				padding-right : none;
+				padding-left : 7px;
+			}
+		}
+ 	}
+ 	 	
+}
+.grid-excerpt{
+	font-size : 100%;
+}
+.without-sidebar .primary{
+	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(12,12);
+ 		margin-right: auto;
+ 	}
+}
+
+/*------------store locator----------------------*/
+#wpsl-search-btn, #wpsl-search-wrap div {
+    margin-right: 10px;
+    float: right;
+}
+#wpsl-search-wrap div label {
+    float: right;
+    margin-left: 10px;
+    margin-right : auto;
+    line-height: 32px;
+}
+#wpsl-result-list {
+    width: 33%;
+    margin-left: .5%;
+    margin-right: auto;
+    float: right;
+    text-align: right;
+}
+#wpsl-gmap {
+    float: left;
+    width: 66.5%;
+}
+.wpsl-direction-index {
+    float: right;
+    width: 8%;
+    margin: 0 0 0 5%;
+}
+.wpsl-direction-txt {
+    float: right;
+    width: 62%;
+}
+.wpsl-direction-distance {
+    float: left;
+    width: 20%;
+    margin: 0 5% 0 0;
+}
+/*------------store locator----------------------*/
+.secondary{
+	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(2 omega,12);
+ 		margin-right: auto;
+
+ 	}
+	nav.side-menu{
+		h4.widgettitle{
+			font-size : 18px;
+			i.fa{
+				padding-left : 5px;
+				padding-right : 1px;
+			}
+		}
+		li{
+
+			img{
+				float : right;
+				margin-left : 8px;
+				margin-right : auto;
+			}
+			&.menu-item-object-product_cat>a:after{
+				@extend .fa;
+				@include at-breakpoint($medium){
+					padding-left: 1px;
+					padding-right: 5px;
+					// width walker added
+					position: absolute;
+					content: "\f0da";
+					right: 4px;
+					left : auto;
+					top: 18px;
+
+				}
+			}
+		}
+		ul.sub-menu{
+			@include at-breakpoint($medium) {
+				position: absolute;
+				right: auto;
+				left: 100%;
+				display : none;
+			}
+
+
+
+		}
+	}
+ 	aside.widget{
+ 		font-size: 110%;
+ 		&.widget_last_products_widget{
+			li {
+				font-size : 130%;
+				img{
+					margin-left : 10px;
+					margin-right : auto;
+				}
+			}
+		}
+
+ 	}
+	
+	
+}
+
+
