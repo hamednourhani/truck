@@ -4,12 +4,15 @@
 		
 		
 		<div class="site-content">
+
+			<?php get_template_part('library/banner','maker'); ?>
+
 			<section class="layout">
 				
 				<div class="primary">
 
 			
-								<?php get_template_part('library/banner','maker'); ?>
+
 				
 						
 					<?php if(have_posts()){ ?>

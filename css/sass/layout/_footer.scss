@@ -2,12 +2,11 @@
 	background-color: $grey3;
 	border-top : 2px solid $orang;
 	overflow : hidden;
-	@extend .def-box-shadow;
-	
+
 }
 div.footer-widget-area{
-	border-bottom : 1px solid $orang;
 
+	color : darken($grey2,5%);
 	.footer-col1,
 	.footer-col2,
 	.footer-col3{
@@ -26,8 +25,11 @@ div.footer-widget-area{
 		font-size : 90%;
 		padding : 10px 20px;
 		margin-bottom : 20px;
+		menu, ol, ul {
+			padding: 0px;
+		}
 		p,h4,h3,span,a{
-			color : $white2;
+			color : darken($grey2,20%);
 		}
 		.widgettitle{
 			
@@ -41,6 +43,7 @@ div.footer-widget-area{
 		    margin-right: 10px;
 		    vertical-align: middle;
 		    font-size: 130%;
+			color:$orang;
 		    
 		}
 	}
@@ -50,7 +53,7 @@ div.footer-widget-area{
 	padding : 5px;
 	text-align : center;
 	min-height : 50px;
-	background-color: darken($orang,5%);
+	background-color: lighten($grey3,2%);
 
 	.socials{
 		float : none;
@@ -120,6 +123,12 @@ div.footer-widget-area{
 			float : right;
 				display: inline-block;
 
+		}
+		a{
+			color : lighten($grey3,15%);
+			&:hover{
+				color : $orang;
+			}
 		}
 	}
 }

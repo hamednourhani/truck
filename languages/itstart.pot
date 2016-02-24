@@ -1,14 +1,14 @@
-# Copyright (C) 2015 iTstar
+# Copyright (C) 2016 farakaranet
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: hermooder 1.0\n"
+"Project-Id-Version: shahrack-truck 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-11-30 20:44:40+00:00\n"
+"POT-Creation-Date: 2016-02-24 21:13:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: iTstar <info@itstar.ir>\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
@@ -50,7 +50,7 @@ msgid "Farakaranet"
 msgstr ""
 
 #: footer.php:27
-msgid "Hermooder © 2015. All Right Reserved"
+msgid "truck © 2015. All Right Reserved"
 msgstr ""
 
 #: functions.php:94
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Sms Panel : "
 msgstr ""
 
-#: functions.php:382 functions.php:855
+#: functions.php:382 functions.php:879
 msgid "Email : "
 msgstr ""
 
@@ -214,55 +214,83 @@ msgstr ""
 msgid "Post Category :"
 msgstr ""
 
-#: functions.php:808
+#: functions.php:806
+msgid "Product Name"
+msgstr ""
+
+#: functions.php:806
+msgid "Order Quantity"
+msgstr ""
+
+#: functions.php:817
 msgid "Your Name (required)"
 msgstr ""
 
-#: functions.php:812
+#: functions.php:821
 msgid "Your Email (required)"
 msgstr ""
 
-#: functions.php:815
+#: functions.php:825
 msgid "Your Phone (required)"
 msgstr ""
 
-#: functions.php:819
-msgid "Products List (required)"
+#: functions.php:829
+msgid "Your Mobile Number (Optional)"
 msgstr ""
 
-#: functions.php:823
+#: functions.php:833
+msgid "Your Fax Number (Optional)"
+msgstr ""
+
+#: functions.php:837
+msgid "To Order Products Enter the order quantity for each product."
+msgstr ""
+
+#: functions.php:841
 msgid "More Information (required)"
 msgstr ""
 
-#: functions.php:826 functions.php:867
+#: functions.php:844 functions.php:898
 msgid "Order Products"
 msgstr ""
 
-#: functions.php:853
+#: functions.php:877
 msgid "Name : "
 msgstr ""
 
-#: functions.php:854
+#: functions.php:878
 msgid "Phone Number : "
 msgstr ""
 
-#: functions.php:856
-msgid "Products : "
+#: functions.php:880
+msgid "Mobile : "
 msgstr ""
 
-#: functions.php:869
+#: functions.php:881
+msgid "Fax : "
+msgstr ""
+
+#: functions.php:882
+msgid "Products List : "
+msgstr ""
+
+#: functions.php:886
+msgid "Product Name : "
+msgstr ""
+
+#: functions.php:887
+msgid " - Quantity : "
+msgstr ""
+
+#: functions.php:909
 msgid "Thanks for Ordering Products, We will contact you as soon as posible."
 msgstr ""
 
-#: functions.php:872
+#: functions.php:912
 msgid "An unexpected error occurred"
 msgstr ""
 
-#: header.php:64
-msgid "Your Ultimate Depilatory Solution"
-msgstr ""
-
-#: header.php:82
+#: header.php:90
 msgid "Main Menu"
 msgstr ""
 
@@ -863,188 +891,40 @@ msgstr ""
 msgid "www.example.com"
 msgstr ""
 
-#: library/custom-post-type.php:31 library/custom-post-type.php:32
-msgid "Product"
-msgstr ""
-
-#: library/custom-post-type.php:33
-msgid "All Products"
-msgstr ""
-
-#: library/custom-post-type.php:34 library/custom-post-type.php:79
-msgid "Add New"
-msgstr ""
-
-#: library/custom-post-type.php:35
-msgid "Add New Products"
-msgstr ""
-
-#: library/custom-post-type.php:36 library/custom-post-type.php:81
-msgid "Edit"
-msgstr ""
-
-#: library/custom-post-type.php:37
-msgid "Edit Product"
-msgstr ""
-
-#: library/custom-post-type.php:38
-msgid "New Product"
-msgstr ""
-
-#: library/custom-post-type.php:39
-msgid "View Product"
-msgstr ""
-
-#: library/custom-post-type.php:40
-msgid "Search Products"
-msgstr ""
-
-#: library/custom-post-type.php:41 library/custom-post-type.php:86
-msgid "Nothing found in the Database."
-msgstr ""
-
-#: library/custom-post-type.php:42 library/custom-post-type.php:87
-msgid "Nothing found in Trash"
-msgstr ""
-
-#: library/custom-post-type.php:45
-msgid "This is a Product"
-msgstr ""
-
-#: library/custom-post-type.php:76 library/custom-post-type.php:77
-msgid "pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:78
-msgid "All pharmacys"
-msgstr ""
-
-#: library/custom-post-type.php:80
-msgid "Add New pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:82
-msgid "Edit pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:83
-msgid "New pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:84
-msgid "View pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:85
-msgid "Search pharmacys"
-msgstr ""
-
-#: library/custom-post-type.php:90
-msgid "This is a pharmacy"
-msgstr ""
-
-#: library/custom-post-type.php:135
-msgid "Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:136
-msgid "Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:137
-msgid "Search Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:138
-msgid "All Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:139
-msgid "Parent Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:140
-msgid "Parent Product Category:"
-msgstr ""
-
-#: library/custom-post-type.php:141
-msgid "Edit Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:142
-msgid "Update Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:143
-msgid "Add New Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:144
-msgid "New Product Category Name"
-msgstr ""
-
-#: library/custom-post-type.php:160
-msgid "Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:161
-msgid "Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:162
-msgid "Search Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:163
-msgid "All Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:164
-msgid "Parent Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:165
-msgid "Parent Product Tag:"
-msgstr ""
-
-#: library/custom-post-type.php:166
-msgid "Edit Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:167
-msgid "Update Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:168
-msgid "Add New Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:169
-msgid "New Product Tag Name"
-msgstr ""
-
-#: library/hermooder.php:87
-msgid "Page %s"
-msgstr ""
-
-#: library/hermooder.php:278
-msgid "The Main Menu"
-msgstr ""
-
-#: library/hermooder.php:309
-msgid "No Related Posts Yet!"
-msgstr ""
-
-#: library/hermooder.php:354
-msgid "Read "
-msgstr ""
-
 #: library/post-meta.php:11 library/post-meta.php:32
 msgid "Tags :"
 msgstr ""
 
 #: library/post-meta.php:33
 msgid "Categories :"
+msgstr ""
+
+#: library/truck.php:87
+msgid "Page %s"
+msgstr ""
+
+#: library/truck.php:278
+msgid "The Main Menu"
+msgstr ""
+
+#: library/truck.php:279
+msgid "The Side Menu"
+msgstr ""
+
+#: library/truck.php:310
+msgid "No Related Posts Yet!"
+msgstr ""
+
+#: library/truck.php:355
+msgid "Read "
+msgstr ""
+
+#: sidebar.php:7
+msgid "Products"
+msgstr ""
+
+#: sidebar.php:12
+msgid "Side Menu"
 msgstr ""
 
 #: single-pharmacy.php:27
@@ -1060,11 +940,11 @@ msgid " Email : "
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "hermooder"
+msgid "shahrack-truck"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://hermooder.com"
+msgid "http://shahrack-truck.com"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -1072,19 +952,15 @@ msgid "hermooder Portal Theme by iTstar."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "iTstar"
+msgid "farakaranet"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://www.itstar.ir"
+msgid "http://karait.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Full Width Page"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "search nearest pharmacy"
 msgstr ""
 
 #: library/cmb/includes/CMB2_JS.php:109

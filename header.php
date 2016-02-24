@@ -50,32 +50,40 @@
 
 	<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			
-		<section class="layout">	
+
 			<div class="header-inner">
 				<div class="hero">
-					
+					<section class="layout">
+
 						
-						<div class="lang-container">
-							<?php do_action('icl_language_selector'); ?>
-						</div>
+
 						
 						<a class="site-url" href="<?php echo get_bloginfo('url'); ?>">
-							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/truck-logo.png" alt="<?php echo get_bloginfo('url'); ?>"/>
-							<span class="site-desc"><?php echo '-| '.__('Your Ultimate Depilatory Solution','truck').' |-'; ?></span>
+							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
+
 						</a>
 
-						<span class="menu-toggler" id="menu-toggler">
-							<i class="fa fa-bars"></i>
-						</span>
-						
+					<div class="lang-container">
+						<?php do_action('icl_language_selector'); ?>
+					</div>
+
+					<div class="contact-info-bar">
+						<i class="fa fa-phone"></i> 99 999 9999
+						<i class="fa fa-envelope"></i>info@shahrak-truck.com
+					</div>
 
 
-					
+
+
+
+				</section>
+
 				</div><!-- hero -->
 			
 
 				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
-																	
+					<section class="layout">
+
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
 	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -91,15 +99,18 @@
 	    					         'fallback_cb' => ''                             // fallback function (if there is one)
 							)); ?>
 
-							<div class="menu-search-area">
-								<?php echo truck_menu_search_form(); ?>
-							</div>
-											
-		
+<!--							<div class="menu-search-area">-->
+<!--								--><?php //echo truck_menu_search_form(); ?>
+<!--							</div>-->
+						<span class="menu-toggler" id="menu-toggler">
+							<i class="fa fa-bars"></i>
+						</span>
+
+					</section>
+
 					</nav>
 				</div>
-		</section>
-			
+
 	</header>	
 
 <!-- ********************************************************************* -->
