@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
 	
 	$('span#menu-toggler').click(function(){
 		console.log("clicked");
-		var main_menu = $('nav.main-menu');
+		var main_menu = $('ul.main-nav');
 		main_menu.slideToggle();
 	});
 	

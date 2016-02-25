@@ -368,17 +368,15 @@ class contact_info_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $address = $instance['address'];
-        $zip = $instance['zip'];
-        $telfax = $instance['telfax'];
+        $phone = $instance['phone'];
+        $fax = $instance['fax'];
         $email = $instance['email'];
-        $smspanel = $instance['smspanel'];
-        
+
                 
         $content = '<main class="widgetbody">';
         $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','truck').$address.'</p>';
-        $content .='<p><i class="fa fa-fire"></i>'.__('Zip : ','truck').$zip.'</p>';
-        $content .='<p><i class="fa fa-fax"></i>'.__('TelFax : ','truck').$telfax.'</p>';
-        $content .='<p><i class="fa fa-tablet"></i></i>'.__('Sms Panel : ','truck').$smspanel.'</p>';
+        $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','truck').$phone.'</p>';
+        $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','truck').$fax.'</p>';
         $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','truck').$email.'</p>';
         $content .= '</main>';
       
@@ -406,16 +404,17 @@ class contact_info_widget extends WP_Widget {
             $address = "No. ----";
         }
 
-        if ( isset( $instance[ 'zip' ] ) ) {
-            $zip = $instance[ 'zip' ];
-        }else {
-            $zip = "+98 ----";
-        }
 
-        if ( isset( $instance[ 'telfax' ] ) ) {
-            $telfax = $instance[ 'telfax' ];
+
+        if ( isset( $instance[ 'phone' ] ) ) {
+            $phone = $instance[ 'phone' ];
         }else {
-            $telfax = "+98 ----";
+            $phone = "+98 ----";
+        }
+        if ( isset( $instance[ 'fax' ] ) ) {
+            $fax = $instance[ 'fax' ];
+        }else {
+            $fax = "+98 ----";
         }
 
         if ( isset( $instance[ 'email' ] ) ) {
@@ -424,11 +423,7 @@ class contact_info_widget extends WP_Widget {
             $email = "info@email.com";
         }
 
-        if ( isset( $instance['smspanel'] ) ) {
-           $smspanel = $instance['smspanel'];
-        }else {
-            $smspanel = '300000000';
-        } $smspanel = $instance['smspanel'];
+
         
         // Widget admin form
         ?>
@@ -440,20 +435,16 @@ class contact_info_widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address :','truck' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $address ); ?>" />
         </p>
-         <p>
-            <label for="<?php echo $this->get_field_id( 'zip' ); ?>"><?php _e( 'Zip :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'zip' ); ?>" name="<?php echo $this->get_field_name( 'zip' ); ?>" type="text" value="<?php echo esc_attr( $zip ); ?>" />
-        </p>
 
+         <p>
+            <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone :','truck' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $telfax ); ?>" />
+        </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'telfax' ); ?>"><?php _e( 'TelFax :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'telfax' ); ?>" name="<?php echo $this->get_field_name( 'telfax' ); ?>" type="text" value="<?php echo esc_attr( $telfax ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax :','truck' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $telfax ); ?>" />
         </p>
 
-         <p>
-            <label for="<?php echo $this->get_field_id( 'smspanel' ); ?>"><?php _e( 'Sms Panel :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'smspanel' ); ?>" name="<?php echo $this->get_field_name( 'smspanel' ); ?>" type="text" value="<?php echo esc_attr( $smspanel ); ?>" />
-        </p>
 
         <p>
             <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email Address :','truck' ); ?></label>
@@ -468,127 +459,15 @@ class contact_info_widget extends WP_Widget {
         $instance = array();
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['address'] = ( ! empty( $new_instance['address'] ) ) ? strip_tags( $new_instance['address'] ) : '';
-        $instance['zip'] = ( ! empty( $new_instance['zip'] ) ) ? strip_tags( $new_instance['zip'] ) : '';
-        $instance['telfax'] = ( ! empty( $new_instance['telfax'] ) ) ? strip_tags( $new_instance['telfax'] ) : '';
+        $instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? strip_tags( $new_instance['phone'] ) : '';
+        $instance['fax'] = ( ! empty( $new_instance['fax'] ) ) ? strip_tags( $new_instance['fax'] ) : '';
         $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
-        $instance['smspanel'] = ( ! empty( $new_instance['smspanel'] ) ) ? strip_tags( $new_instance['smspanel'] ) : '';
         return $instance;
     }
 } // Class wpb_widget ends here
 
 /* DON'T DELETE THIS CLOSING TAG */ 
 /*---------------Widgets----------------------*/
-
-// Creating the widget 
-class last_products_widget extends WP_Widget {
-
-    function __construct() {
-        parent::__construct(
-        // Base ID of your widget
-        'last_products_widget', 
-
-        // Widget name will appear in UI
-        __('Last Products Widget', 'truck'),
-
-        // Widget description
-        array( 'description' => __( 'Display Last Products', 'truck' ), )
-        );
-    }
-
-    // Creating widget front-end
-    // This is where the action happens
-    public function widget( $args, $instance ) {
-        global $wp_query;
-
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        $number = $instance['number'];
-        $term = get_term($instance['cat'],'product_cat');
-
-        //var_dump($instance);
-        $products = get_posts(array(
-            'post_type' => 'product',
-            'posts_per_page' => $number,
-            'product_cat'         => $term->slug,
-            )
-        );
-       
-        $content = '<ul class="widget-list">';
-        foreach($products as $product) : setup_postdata( $product );
-          $url = get_the_permalink($product->ID);
-          $thumb = get_the_post_thumbnail($product->ID,'product-thumb');
-          $name = $product->post_title;
-          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
-        endforeach;
-        $content .= '</ul>';
-
-      
-       
-
-        
-        // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        
-        if ( ! empty( $title ) )
-          echo $args['before_title'] . $title . $args['after_title'];
-          echo $content;
-        // This is where you run the code and display the output
-          echo $args['after_widget'];
-    }
-        
-    // Widget Backend 
-    public function form( $instance ) {
-        if ( isset( $instance[ 'title' ] ) ) {
-            $title = $instance[ 'title' ];
-        }else {
-            $title = __( 'Last Products', 'truck' );
-        }
-        if ( isset( $instance[ 'number' ] ) ) {
-            $number = $instance[ 'number' ];
-        }else {
-            $number = 5;
-        }
-        if ( isset( $instance[ 'cat' ] ) ) {
-            $cat = $instance[ 'cat' ];
-        }else {
-            $cat ="";
-        }
-        // Widget admin form
-        ?>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-        </p>
-         <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'product Numbers :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Product Category :','truck' ); ?></label>
-           <?php wp_dropdown_categories(array(
-                  'name'               => $this->get_field_name( 'cat' ),
-                  'id'                 => $this->get_field_id( 'cat' ),
-                  'class'              => 'widefat',
-                  'taxonomy'           => 'product_cat',
-                  'echo'               => '1',
-                  'selected'          =>esc_attr( $cat ),
-            )); ?>
-
-
-        </p>
-        
-        <?php 
-    }
-      
-    // Updating widget replacing old instances with new
-    public function update( $new_instance, $old_instance ) {
-        $instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
-        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
-        //var_dump($instance);
-        return $instance;
-    }
-} // Class wpb_widget ends here
 
 
 
@@ -702,7 +581,6 @@ class last_posts_by_cat_widget extends WP_Widget {
 
 // Register and load the widget
 function truck_widget() {
-  register_widget( 'last_products_widget' );
   register_widget( 'last_posts_by_cat_widget' );
   register_widget( 'contact_info_widget' );
 }
@@ -710,295 +588,9 @@ add_action( 'widgets_init', 'truck_widget' );
 
 
 
-/*----------------Pharmacy search -----------------------*/
-// class Pharmacy {
-//       public $name = "";
-//       public $hobbies  = "";
-//       public $birthdate = "";
-//    }
-  
-//    $p = new Pharmacy();
-//    $p->name = "sachin";
-//    $p->hobbies  = "sports";
-//    $p->birthdate = date('m/d/Y h:i:s a', "8/5/1974 12:20:03 p");
-//    $p->birthdate = date('m/d/Y h:i:s a', strtotime("8/5/1974 12:20:03"));
-
-//   json_encode($p);
-//   json_decode ($json [,$assoc = false [, $depth = 512 [, $options = 0 ]]])
 
 
 
-
-// $jsonIterator = new RecursiveIteratorIterator(
-//     new RecursiveArrayIterator(json_decode($json, TRUE)),
-//     RecursiveIteratorIterator::SELF_FIRST);
-
-// foreach ($jsonIterator as $key => $val) {
-//     if(is_array($val)) {
-//         echo "$key:\n";
-//     } else {
-//         echo "$key => $val\n";
-//     }
-// }
-
-
-// $fruits = array("a" => "lemon", "b" => "orange", array("a" => "apple", "p" => "pear"));
-
-// $iterator = new RecursiveArrayIterator($fruits);
-
-// while ($iterator->valid()) {
-
-//     if ($iterator->hasChildren()) {
-//         // print all children
-//         foreach ($iterator->getChildren() as $key => $value) {
-//             echo $key . ' : ' . $value . "\n";
-//         }
-//     } else {
-//         echo "No children.\n";
-//     }
-
-//     $iterator->next();
-// }
-
-
-// $string = file_get_contents("/home/michael/test.json");
-// dirname(__FILE__)
-// string dirname ( string $path [, int $levels = 1 ] )
-// getcwd();
-// chdir( $dir );
-
-
-
-// function get_file_dir() {
-//     global $argv;
-//     $dir = dirname(getcwd() . '/' . $argv[0]);
-//     $curDir = getcwd();
-//     chdir($dir);
-//     $dir = getcwd();
-//     chdir($curDir);
-//     return $dir;
-// }
-// So you can use it like this:
-// include get_file_dir() . '/otherfile.php';
-// // or even..
-// chdir(get_file_dir());
-// include './otherfile.php';
-
-
-//------------ product order form ----------------
-function html_form_code() {
-
-   $posts = get_posts(array(
-          'post_type' => 'product',
-          'posts_per_page' => -1,
-          'suppress_filters' => false,
-          )
-      );
-     
-//      $product_select = '<select multiple="multiple" class="select-products" name="cf-products[]" >';
-//      foreach($posts as $post) : setup_postdata( $post );
-//        $name = $post->post_title;
-//        $product_select .='<option value="'.$name.'">'.$name.'</option>';
-//      endforeach;
-//     $product_select .= '</select>';
-
-    $product_table = '<table class="products_list_table"><tbody>';
-    $product_table .= '<tr><th>'.__("Product Name","truck").'</th><th>'.__("Order Quantity","truck").'</th></tr>';
-    foreach($posts as $post) : setup_postdata( $post );
-        $name = $post->post_title;
-        $id = $post->ID;
-        $product_table .='<tr><td>'.$name.'</td><td><input type="text" name="product_'.$id.'" value="' . ( isset( $_POST["product_".$id] ) ? esc_attr( $_POST["product_".$id] ) : '' ) . '"/></td></tr>';
-      endforeach;
-     $product_table .= '</tbody></table>';
-
-
-  echo '<form action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post" class="order-products">';
-  echo '<p>';
-  echo __('Your Name (required)','truck'). '<br/>';
-  echo '<input type="text" name="cf-name"  value="' . ( isset( $_POST["cf-name"] ) ? esc_attr( $_POST["cf-name"] ) : '' ) . '" size="40" />';
-  echo '</p>';
-  echo '<p>';
-  echo __('Your Email (required)','truck'). '<br/>';
-  echo '<input type="email" name="cf-email" value="' . ( isset( $_POST["cf-email"] ) ? esc_attr( $_POST["cf-email"] ) : '' ) . '" size="40" />';
-  echo '</p>';
-  echo '<p>';
-   echo __('Your Phone (required)','truck'). '<br/>';
-  echo '<input type="text" name="cf-phone" value="' . ( isset( $_POST["cf-phone"] ) ? esc_attr( $_POST["cf-phone"] ) : '' ) . '" size="40" />';
-  echo '</p>';
-  echo '</p>';
-   echo __('Your Mobile Number (Optional)','truck'). '<br/>';
-  echo '<input type="text" name="cf-mobile-phone" value="' . ( isset( $_POST["cf-mobile-phone"] ) ? esc_attr( $_POST["cf-mobile-phone"] ) : '' ) . '" size="40" />';
-  echo '</p>';
-  echo '</p>';
-   echo __('Your Fax Number (Optional)','truck'). '<br/>';
-  echo '<input type="text" name="cf-fax" value="' . ( isset( $_POST["cf-fax"] ) ? esc_attr( $_POST["cf-fax"] ) : '' ) . '" size="40" />';
-  echo '</p>';
-  echo '<p>';
-  echo  '<em>'.__('To Order Products Enter the order quantity for each product.','truck'). '</em><br/>';
-  echo  $product_table;
-  echo '</p>';
-  echo '<p>';
-  echo  __('More Information (required)','truck'). '<br/>';
-  echo '<textarea rows="10" cols="35" name="cf-message">' . ( isset( $_POST["cf-message"] ) ? esc_attr( $_POST["cf-message"] ) : '' ) . '</textarea>';
-  echo '</p>';
-  echo '<p><input type="submit" name="cf-submitted" value="'.__('Order Products','truck').'"></p>';
-  echo '</form>';
-}
-
-
-function set_html_content_type() {
-  return 'text/html';
-}
-
-function deliver_mail() {
-
-  // if the submit button is clicked, send the email
-  if ( isset( $_POST['cf-submitted']) && isset( $_POST["cf-email"] ) && isset( $_POST["cf-name"] ) ) {
-
-
-    // sanitize form values
-    $name    = sanitize_text_field( $_POST["cf-name"] );
-    $email   = sanitize_email( $_POST["cf-email"] );
-    $phone   = sanitize_text_field( $_POST["cf-phone"] );
-     $mobile_phone   = sanitize_text_field( $_POST["cf-mobile-phone"] );
-      $fax   = sanitize_text_field( $_POST["cf-fax"] );
-
-
-    
-    $products = get_posts(array(
-          'post_type' => 'product',
-          'posts_per_page' => -1,
-          'suppress_filters' => false,
-          )
-      );
-
-    
-    $message = "<div style='direction:rtl;text-align:right;'>";
-    $message .= "<p>".__('Name : ','truck').$name."</p>"."\r\n";
-    $message .= "<p>".__('Phone Number : ','truck').$phone."</p><br />"."\r\n";
-    $message .= "<p>".__('Email : ','truck').$email."</p><br />"."\r\n";
-    $message .= "<p>".__('Mobile : ','truck').$mobile_phone."</p><br />"."\r\n";
-    $message .= "<p>".__('Fax : ','truck').$fax."</p><br />"."\r\n";
-    $message .= "<p>".__('Products List : ','truck')."</p><br />"."\r\n";
-    foreach($products as $product){
-     $product_id = $product->ID;
-      if(isset( $_POST['product_'.$product_id] ) && !empty($_POST['product_'.$product_id])){
-       $message .= "<p>".__("Product Name : ","truck").$product->post_title."  ";
-       $message .= __(" - Quantity : ","truck").sanitize_text_field( $_POST["product_".$product_id] )."</p><br />";
-       }
-    }
-
-    $message .= "<p>".esc_textarea( $_POST["cf-message"] )."\r\n"."</p></div>";
-
-
-    // get the blog administrator's email address
-    $to = get_option( 'admin_email' );
-
-    $headers = array('From: '.$name.'<'.$email.'>');
-    $subject =  __('Order Products','truck');
-    add_filter( 'wp_mail_content_type', 'set_html_content_type' );
-
-    //var_dump("to :".$to);
-//    var_dump("headers : ".$headers);
-//    var_dump("subject : ".$subject);
-//    var_dump("message : ".$message);
-
-    // If email has been process for sending, display a success message
-    if ( wp_mail( $to, $subject, $message, $headers ) ) {
-      echo '<div>';
-      echo '<p class="success-message">'.__('Thanks for Ordering Products, We will contact you as soon as posible.','truck'). '</p>';
-      echo '</div>';
-    } else {
-      echo '<p class="failed-message">'.__('An unexpected error occurred','truck').'</p>';
-    }
-
-    remove_filter( 'wp_mail_content_type', 'set_html_content_type' );
-
-  }
-}
-
-function cf_shortcode() {
-  ob_start();
-  deliver_mail();
-  html_form_code();
-
-  return ob_get_clean();
-}
-
-add_shortcode( 'product_order_form', 'cf_shortcode' );
-
-
-/*------------------- Pharmacy search function.----------------------------------------- */
-
-add_action("wp_ajax_truck_request_pharmacies", "truck_request_pharmacies");
-add_action("wp_ajax_nopriv_truck_request_pharmacies", "truck_request_pharmacies_approval");
-
-function truck_request_pharmacies() {
-
-global $wp,$wp_query; 
-
-require("phpsqlsearch_dbinfo.php");
-// Get parameters from URL
-$center_lat = sanitize_text_field($_SERVER["lat"]);
-$center_lng = sanitize_text_field($_SERVER["lng"]);
-$radius = sanitize_text_field($_SERVER["radius"]);
-// Start XML file, create parent node
-$dom = new DOMDocument("1.0");
-$node = $dom->createElement("markers");
-$parnode = $dom->appendChild($node);
-
-$posts = get_posts(array(
-      'post_type' => 'pharmacy',
-      'posts_per_page' => -1,
-      )
-  );
-     
-  
-// Search the rows in the markers table
-// $query = sprintf("SELECT address, name, lat, lng, ( 3959 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM markers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
-//   mysql_real_escape_string($center_lat),
-//   mysql_real_escape_string($center_lng),
-//   mysql_real_escape_string($center_lat),
-//   mysql_real_escape_string($radius));
-
-header("Content-type: text/xml");
-// Iterate through the rows, adding XML nodes for each
-foreach($posts as $post) { 
-  setup_postdata( $post );
-  
-  $address = get_post_meta($post->ID,'_truck_address',1);
-  $lat = get_post_meta($post->ID,'_truck_Latitude',1);
-  $lng = get_post_meta($post->ID,'_truck_Longitude',1);
-  $distance = (3959 * acos( cos( radians($center_lat) ) * cos( radians( $lat ) ) * cos( radians( $lng ) - radians($center_lng) ) + sin( radians($center_lat) ) * sin( radians( $lat ) ) ) );
-  
-  if($distance < $radius){
-    $node = $dom->createElement("marker");
-    $newnode = $parnode->appendChild($node);
-    $newnode->setAttribute("name", $post->post_title);
-    $newnode->setAttribute("address", $address);
-    $newnode->setAttribute("lat", $lat);
-    $newnode->setAttribute("lng", $lng);
-    $newnode->setAttribute("distance", $distance);
-  }
-
-}
-
-   if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-      echo $dom->saveXML();
-      
-   }
-   else {
-      header("Location: ".$_SERVER["HTTP_REFERER"]);
-   }
-
-   die();
-
-}
-
-function truck_request_pharmacies_approval() {
-   echo "You must log in to view";
-   die();
-}
 
 class Menu_With_Image extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth = '0', $args = array(), $id = '0') {

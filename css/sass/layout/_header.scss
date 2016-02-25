@@ -25,18 +25,36 @@
 		background-color: $grey3;
 		text-align : center;
 		color : $grey2;
-		a.site-url{
-			display: inline-block;
-			margin : auto;
-			.site-logo{
-				display: block;
-				margin : 25px auto 5px;
-				max-width : 240px;
+		.site-logo-for-tablet{
+			width : auto;
+			height : 110px;
+			display : block;
+			.site-logo {
+				height : 100%;
+				max-height : 100%;
+				width : auto;
 			}
-			span.site-desc{
-				margin-bottom : 10px;
-				display: inline-block;
-				color : $orang;
+			@include at-breakpoint($medium){
+				display : none;
+			}
+		}
+		.site-logo-contianer {
+			position: absolute;
+			top: 5px;
+			left: 0;
+			z-index: 999999;
+			height: 115px;
+			width: 115px;
+			display :none;
+			@include at-breakpoint($medium) {
+				display : block;
+			}
+			a.site-url {
+				.site-logo {
+					display: block;
+					max-width: 100%;
+				}
+
 			}
 		}
 		.lang-container{
@@ -60,58 +78,39 @@
 			}
 		}
 		.contact-info-bar{
-			color : darken($grey2,20%);
-			i{
+			padding : 7px;
+			font-size : 80%;
+			color : darken($grey2,25%);
+			i:before{
 				color : $orang;
+				margin-right : 5px;
+				margin-left : 10px;
+
 			}
 		}
 	}
 	nav.main-menu{
+		@extend .def-box-shadow;
 		background-color: $orang;
 		width : 100%;
-		display : none;
 		position : relative;
-		.menu-search-area{
-			position : absolute;
-			top : 15px;
-			right : 30px;
-			display : none;
-			label{
-				display : none;
-			}
-			span#submit{
-				color : $blue2;
-				cursor: pointer;
-				position : absolute;
-				right : 10px;
-				top : 0px;
-			}
-			input#s{
-				
-				@include single-transition(all, 0.8s, ease-in-out);
-				width : 130px;
-				height : 32px;
-				color : $black1;
-				font-size : 90%;
-				display: inline-block;
-				padding-right : 20px;
-				&:focus{
-					width : 160px;
-				}
-				
-			}
 
-		}
-		@include at-breakpoint($medium){
-			display: block;
-			.menu-search-area{
-				display : inline-block;
+		.site-logo-in-menu {
+			height : 45px;
+			width : 60px;
+			display: none;
+			.site-logo {
+				max-width: 100%;
+				height: auto;
+
 			}
 		}
-
 		
 	}
-	span.menu-toggler{
+	div.menu-icons{
+		float : right;
+	}
+	span.menu-icon{
 		display: inline-block;
 		@include at-breakpoint($medium){
 			display: none;
@@ -127,7 +126,13 @@
 				opacity : 0.9;
 			}
 		}
+		span.search-icon{
+			@include at-breakpoint($medium){
+				display: inline-block;
+			}
+		}
 	}
+
 
 }
 ul.main-nav{
@@ -137,12 +142,27 @@ ul.main-nav{
 	padding-left : 40px;
 	padding-right : 40px;
 	margin : 0px auto;
+	display : none;
+	margin-left : 0px;
+	@include at-breakpoint($medium){
+		margin-left : 180px;
+	}
+
+	@include at-breakpoint($medium){
+		display: block;
+		.menu-search-area{
+			display : inline-block;
+		}
+	}
+
+
 
 	&>li{
 		display: block;
 		@include at-breakpoint($medium){
 			display: inline-block;
-			margin-right : 10px;
+			margin-right : 0px;
+			margin-left : 0px;
 		}
 		position : relative;
 		&.fa{
@@ -159,6 +179,9 @@ ul.main-nav{
 
 			color : $grey1;
 			padding : 5px;
+			border:{
+				left : 1px solid lighten($orang,10%);
+			}
 			@include at-breakpoint($medium){
 				padding: 15px 10px;
 			}
@@ -167,6 +190,12 @@ ul.main-nav{
     			background-color : lighten($orang , 5%);
     		}
 
+		}
+		&:last-child{
+			a{
+				border-right : 1px solid lighten($orang,10%);
+
+			}
 		}
 		&.current_page_item{
 			&>a{
@@ -183,13 +212,13 @@ ul.main-nav{
 			padding-left: 5px;
 			// width walker added
 			position: absolute;
-	    	right: 30%;
-	    	top: 38px;
+	    	right: 45%;
+	    	top: 39px;
 	    }
 	}
 	&>li>ul.sub-menu{
 		@include at-breakpoint($medium){
-			border-top : 2px solid lighten($orang,5%);
+			border-top : 1px solid lighten($orang,5%);
 		}
 	}
 	&>li>ul.sub-menu,li ul.sub-menu{
@@ -231,10 +260,11 @@ ul.main-nav{
 			}
 			@include at-breakpoint($medium){
 				border : 0px;
-				color : $black2;
+				color : $grey1;
+				background-color: $orang;
 				&:hover{
-					color : $white;
-					// background-color : $black2;
+					//color : $white;
+					 background-color : lighten($orang,5%);
 				}
 			}
 		}

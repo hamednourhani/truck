@@ -55,13 +55,23 @@
 				<div class="hero">
 					<section class="layout">
 
-						
 
-						
+
+						<div class="site-logo-for-tablet">
+
+							<a class="site-url" href="<?php echo get_bloginfo('url'); ?>">
+								<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
+
+							</a>
+						</div>
+
+						<div class="site-logo-contianer">
+
 						<a class="site-url" href="<?php echo get_bloginfo('url'); ?>">
 							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
 
 						</a>
+						</div>
 
 					<div class="lang-container">
 						<?php do_action('icl_language_selector'); ?>
@@ -84,7 +94,21 @@
 				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 					<section class="layout">
 
-							<?php wp_nav_menu(array(
+						<div class="site-logo-in-menu">
+							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
+						</div>
+
+						<div class="menu-icons">
+							<span class="menu-icon" id="menu-toggler">
+								<i class="fa fa-bars"></i>
+							</span>
+							<span class="menu-icon search-icon" id="search-toggler">
+								<i class="fa fa-search"></i>
+							</span>
+
+						</div>
+
+						<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
 	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 	    					         'menu' => __( 'Main Menu', 'truck' ),  // nav name
@@ -102,9 +126,7 @@
 <!--							<div class="menu-search-area">-->
 <!--								--><?php //echo truck_menu_search_form(); ?>
 <!--							</div>-->
-						<span class="menu-toggler" id="menu-toggler">
-							<i class="fa fa-bars"></i>
-						</span>
+
 
 					</section>
 

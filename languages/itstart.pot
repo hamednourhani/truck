@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shahrack-truck 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-02-24 21:13:11+00:00\n"
+"POT-Creation-Date: 2016-02-25 09:33:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,167 +130,63 @@ msgstr ""
 msgid "Display Contact Information"
 msgstr ""
 
-#: functions.php:378
+#: functions.php:377
 msgid "Address : "
 msgstr ""
 
+#: functions.php:378
+msgid "Phone : "
+msgstr ""
+
 #: functions.php:379
-msgid "Zip : "
-msgstr ""
-
-#: functions.php:380
-msgid "TelFax : "
-msgstr ""
-
-#: functions.php:381
-msgid "Sms Panel : "
-msgstr ""
-
-#: functions.php:382 functions.php:879
-msgid "Email : "
-msgstr ""
-
-#: functions.php:400 functions.php:656
-msgid "Last Posts"
-msgstr ""
-
-#: functions.php:436 functions.php:558 functions.php:671
-msgid "Title:"
-msgstr ""
-
-#: functions.php:440
-msgid "Address :"
-msgstr ""
-
-#: functions.php:444
-msgid "Zip :"
-msgstr ""
-
-#: functions.php:449
-msgid "TelFax :"
-msgstr ""
-
-#: functions.php:454
-msgid "Sms Panel :"
-msgstr ""
-
-#: functions.php:459
-msgid "Email Address :"
-msgstr ""
-
-#: functions.php:491
-msgid "Last Products Widget"
-msgstr ""
-
-#: functions.php:494
-msgid "Display Last Products"
-msgstr ""
-
-#: functions.php:543
-msgid "Last Products"
-msgstr ""
-
-#: functions.php:562
-msgid "product Numbers :"
-msgstr ""
-
-#: functions.php:566
-msgid "Product Category :"
-msgstr ""
-
-#: functions.php:603
-msgid "Last Posts By Category Widget"
-msgstr ""
-
-#: functions.php:606
-msgid "Display Last Posts in Category"
-msgstr ""
-
-#: functions.php:675
-msgid "Post Numbers :"
-msgstr ""
-
-#: functions.php:679
-msgid "Post Category :"
-msgstr ""
-
-#: functions.php:806
-msgid "Product Name"
-msgstr ""
-
-#: functions.php:806
-msgid "Order Quantity"
-msgstr ""
-
-#: functions.php:817
-msgid "Your Name (required)"
-msgstr ""
-
-#: functions.php:821
-msgid "Your Email (required)"
-msgstr ""
-
-#: functions.php:825
-msgid "Your Phone (required)"
-msgstr ""
-
-#: functions.php:829
-msgid "Your Mobile Number (Optional)"
-msgstr ""
-
-#: functions.php:833
-msgid "Your Fax Number (Optional)"
-msgstr ""
-
-#: functions.php:837
-msgid "To Order Products Enter the order quantity for each product."
-msgstr ""
-
-#: functions.php:841
-msgid "More Information (required)"
-msgstr ""
-
-#: functions.php:844 functions.php:898
-msgid "Order Products"
-msgstr ""
-
-#: functions.php:877
-msgid "Name : "
-msgstr ""
-
-#: functions.php:878
-msgid "Phone Number : "
-msgstr ""
-
-#: functions.php:880
-msgid "Mobile : "
-msgstr ""
-
-#: functions.php:881
 msgid "Fax : "
 msgstr ""
 
-#: functions.php:882
-msgid "Products List : "
+#: functions.php:380
+msgid "Email : "
 msgstr ""
 
-#: functions.php:886
-msgid "Product Name : "
+#: functions.php:398 functions.php:535
+msgid "Last Posts"
 msgstr ""
 
-#: functions.php:887
-msgid " - Quantity : "
+#: functions.php:431 functions.php:550
+msgid "Title:"
 msgstr ""
 
-#: functions.php:909
-msgid "Thanks for Ordering Products, We will contact you as soon as posible."
+#: functions.php:435
+msgid "Address :"
 msgstr ""
 
-#: functions.php:912
-msgid "An unexpected error occurred"
+#: functions.php:440
+msgid "Phone :"
 msgstr ""
 
-#: header.php:90
+#: functions.php:444
+msgid "Fax :"
+msgstr ""
+
+#: functions.php:450
+msgid "Email Address :"
+msgstr ""
+
+#: functions.php:482
+msgid "Last Posts By Category Widget"
+msgstr ""
+
+#: functions.php:485
+msgid "Display Last Posts in Category"
+msgstr ""
+
+#: functions.php:554
+msgid "Post Numbers :"
+msgstr ""
+
+#: functions.php:558
+msgid "Post Category :"
+msgstr ""
+
+#: header.php:114
 msgid "Main Menu"
 msgstr ""
 
