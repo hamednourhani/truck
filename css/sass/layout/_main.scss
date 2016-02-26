@@ -1,5 +1,23 @@
 /* main style */
+.site-content{
+	.banner-wrapper{
+		margin-top : 10px;
+		border : 1px solid lighten($orang,25%);
+		background-color: $glassyWhite;
+		overflow: hidden;
+		text-align: left;
+		padding:0px;
+		.banner-inner{
+			padding:5px;
+			padding-bottom : 0px;
+		}
+		h1{
+			font-size : 1.3em;
+		}
 
+
+	}
+}
 
 
 //-------------site-content-------------------
@@ -13,20 +31,7 @@
 		top :20px;
 		// bottom : 20px;
 	}
-	.banner-wrapper{
-		border-left : 2px solid lighten($orang,15%);
-		border-bottom : 1px solid lighten($orang,25%);
-		background-color: $glassyWhite;
-		overflow: hidden;
-		text-align: left;
-		padding:5px;
-		max-height : 473px;
-		margin-bottom : 20px;
-		h1{
-			font-size : 1.3em;
-		}
 
-	}
  	article.hentry{
 		border-left : 2px solid lighten($orang,15%);
 		border-bottom : 1px solid lighten($orang,25%);

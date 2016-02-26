@@ -8,12 +8,13 @@
 				
 				<div class="site-content">
 					<section class="layout">
-						
+
+						<?php get_template_part('library/banner','maker'); ?>
+
 						<div class="primary">
 
 						
-								<?php get_template_part('library/banner','maker'); ?>
-							
+
 							
 								
 							<article class="hentry">

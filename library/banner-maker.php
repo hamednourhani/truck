@@ -34,6 +34,10 @@
 				$image = get_post_meta( get_the_ID(), '_truck_image' );
 				echo '<div class="banner-wrapper"><div class="banner-inner"><img class="page-banner" src="'.$image[0].'"/></div></div>';
 				break;
+			case 'map':
+				$map = get_post_meta( get_the_ID(), '_truck_map',1 );
+				echo '<div class="banner-wrapper"><div class="banner-inner">'.$map.'</div></div>';
+				break;
 			default: 
 				echo '<div class="banner-space"></div>';
 				break;

@@ -78,8 +78,8 @@
 					</div>
 
 					<div class="contact-info-bar">
-						<i class="fa fa-phone"></i> 99 999 9999
-						<i class="fa fa-envelope"></i>info@shahrak-truck.com
+						<span><i class="fa fa-phone"></i> 021-9-55247678</span>
+						<span><i class="fa fa-envelope"></i>info@shahrak-truck.com</span>
 					</div>
 
 

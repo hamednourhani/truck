@@ -81,11 +81,14 @@
 			padding : 7px;
 			font-size : 80%;
 			color : darken($grey2,25%);
-			i:before{
-				color : $orang;
-				margin-right : 5px;
-				margin-left : 10px;
+			span {
+				display : inline-block;
+				i:before {
+					color: $orang;
+					margin-right: 5px;
+					margin-left: 10px;
 
+				}
 			}
 		}
 	}
@@ -105,28 +108,49 @@
 
 			}
 		}
-		
+		&.scroll-to-fixed-fixed{
+			.site-logo-in-menu{
+				display: inline-block;
+				float : left;
+			}
+		}
 	}
 	div.menu-icons{
+		display: block;
+		width:100%;
+		text-align: right;
+		@include at-breakpoint($medium){
+			width : auto;
+		}
 		float : right;
 	}
 	span.menu-icon{
+		@extend .def-transition;
 		display: inline-block;
+		padding : 15px;
+		border-left : 1px solid lighten($orang,10%);
+		border-bottom : 1px solid lighten($orang,10%);
+		cursor: pointer;
+		z-index:999998;
+		&:hover{
+			background-color: lighten($orang,5%);
+		}
+
 		@include at-breakpoint($medium){
 			display: none;
+			border-bottom : 0px;
+
 		}
-		cursor: pointer;
 		i:before{
-			padding : 3px 6px;
 			color : $white;
-			font-size: 	180%;
+			font-size: 	140%;
 		}
 		&:hover{
 			i:before{
 				opacity : 0.9;
 			}
 		}
-		span.search-icon{
+		&.search-icon{
 			@include at-breakpoint($medium){
 				display: inline-block;
 			}
@@ -144,8 +168,12 @@ ul.main-nav{
 	margin : 0px auto;
 	display : none;
 	margin-left : 0px;
+	clear : both;
+
 	@include at-breakpoint($medium){
-		margin-left : 180px;
+		margin-left : 120px;
+		clear : none;
+
 	}
 
 	@include at-breakpoint($medium){
@@ -179,11 +207,12 @@ ul.main-nav{
 
 			color : $grey1;
 			padding : 5px;
-			border:{
-				left : 1px solid lighten($orang,10%);
-			}
+			border : 0px;
 			@include at-breakpoint($medium){
 				padding: 15px 10px;
+				border:{
+					left : 1px solid lighten($orang,10%);
+				}
 			}
     		display: inline-block;
     		&:hover{
@@ -193,7 +222,11 @@ ul.main-nav{
 		}
 		&:last-child{
 			a{
-				border-right : 1px solid lighten($orang,10%);
+				border-right : 0px;
+				@include at-breakpoint($medium){
+					border-right : 1px solid lighten($orang,10%);
+
+				}
 
 			}
 		}

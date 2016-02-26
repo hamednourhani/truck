@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shahrack-truck 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-02-25 09:33:32+00:00\n"
+"POT-Creation-Date: 2016-02-26 07:13:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -617,99 +617,67 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: library/cmb-functions.php:152
-msgid "pharmacy Information"
-msgstr ""
-
-#: library/cmb-functions.php:165
-msgid "address"
-msgstr ""
-
-#: library/cmb-functions.php:166
-msgid "Enter pharmacy address"
-msgstr ""
-
-#: library/cmb-functions.php:173
-msgid "Latitude"
-msgstr ""
-
-#: library/cmb-functions.php:174
-msgid "Enter address Latitude"
-msgstr ""
-
-#: library/cmb-functions.php:181
-msgid "Longitude"
-msgstr ""
-
-#: library/cmb-functions.php:182
-msgid "Enter address Longitude"
-msgstr ""
-
-#: library/cmb-functions.php:191
-msgid "email"
-msgstr ""
-
-#: library/cmb-functions.php:192
-msgid "Enter pharmacy email address"
-msgstr ""
-
-#: library/cmb-functions.php:199
-msgid "phone"
-msgstr ""
-
-#: library/cmb-functions.php:200
-msgid "Enter pharmacy phone"
-msgstr ""
-
-#: library/cmb-functions.php:227
+#: library/cmb-functions.php:116
 msgid "Page Banner"
 msgstr ""
 
-#: library/cmb-functions.php:240
+#: library/cmb-functions.php:129
 msgid "Banner"
 msgstr ""
 
-#: library/cmb-functions.php:241
+#: library/cmb-functions.php:130
 msgid "Choose Banner Mod, SlideShow , Image Banner or Nothing"
 msgstr ""
 
-#: library/cmb-functions.php:246
+#: library/cmb-functions.php:135
 msgid "Slider"
 msgstr ""
 
-#: library/cmb-functions.php:247
+#: library/cmb-functions.php:136
 msgid "Image"
 msgstr ""
 
-#: library/cmb-functions.php:260
+#: library/cmb-functions.php:137
+msgid "Map"
+msgstr ""
+
+#: library/cmb-functions.php:150
 msgid "Slider Shortcode"
 msgstr ""
 
-#: library/cmb-functions.php:261
+#: library/cmb-functions.php:151
 msgid "write this page Revolotion Slider shortcode with alis name here"
 msgstr ""
 
-#: library/cmb-functions.php:268
+#: library/cmb-functions.php:158
 msgid "Banner Image"
 msgstr ""
 
-#: library/cmb-functions.php:269
+#: library/cmb-functions.php:159
 msgid "Upload an image to show as the banner"
 msgstr ""
 
-#: library/cmb-functions.php:276
+#: library/cmb-functions.php:165
+msgid "Google Map"
+msgstr ""
+
+#: library/cmb-functions.php:166
+msgid "Enter Google Map embed code"
+msgstr ""
+
+#: library/cmb-functions.php:173
 msgid "Page Title"
 msgstr ""
 
-#: library/cmb-functions.php:277
+#: library/cmb-functions.php:174
 msgid "show Page Title or Not?"
 msgstr ""
 
-#: library/cmb-functions.php:281
+#: library/cmb-functions.php:178
 msgid "Yes"
 msgstr ""
 
-#: library/cmb-functions.php:282
+#: library/cmb-functions.php:179
 msgid "No"
 msgstr ""
 
@@ -823,18 +791,6 @@ msgstr ""
 msgid "Side Menu"
 msgstr ""
 
-#: single-pharmacy.php:27
-msgid " Address : "
-msgstr ""
-
-#: single-pharmacy.php:28
-msgid " Phone : "
-msgstr ""
-
-#: single-pharmacy.php:29
-msgid " Email : "
-msgstr ""
-
 #. Theme Name of the plugin/theme
 msgid "shahrack-truck"
 msgstr ""
@@ -857,6 +813,14 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Full Width Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Intro Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Without Sidebar"
 msgstr ""
 
 #: library/cmb/includes/CMB2_JS.php:109

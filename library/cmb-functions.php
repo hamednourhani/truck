@@ -97,117 +97,6 @@ function truck_before_row_if_2( $field_args, $field ) {
 
 
 
-
-
-
-
-
-/******************************************************************/
-/*--------------------Product Features-------------------------------*/
-/******************************************************************/
-//  add_action( 'cmb2_init', 'truck_register_product_features_metabox' );
-// function truck_register_product_features_metabox() {
-
-// 	$prefix = '_truck_';
-
-// 	/**
-// 	 * Sample metabox to demonstrate each field type included
-// 	 */
-// 	$cmb_demo = new_cmb2_box( array(
-// 		'id'            => $prefix . 'prodct_features',
-// 		'title'         => __( 'Product Features', 'truck' ),
-// 		'object_types'  => array( 'pharmacy' ), // Post type
-		
-// 	) );
-
-
-	
-// 	$cmb_demo->add_field( array(
-// 		'name'         => __( 'address', 'truck' ),
-// 		'desc'         => __( 'Enter pharmacy address', 'truck' ),
-// 		'id'           => $prefix . 'address',
-// 		'type'         => 'text',
-		
-// 	) );
-
-	
-// }
-/******************************************************************/
-/*--------------------Pharmacy-------------------------------*/
-/******************************************************************/
-add_action( 'cmb2_init', 'truck_register_pharmacy_images_metabox' );
-/**
- * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
- */
-function truck_register_pharmacy_images_metabox() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_truck_';
-
-	/**
-	 * Sample metabox to demonstrate each field type included
-	 */
-	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'pharmacy_information',
-		'title'         => __( 'pharmacy Information', 'truck' ),
-		'object_types'  => array( 'pharmacy' ), // Post type
-		// 'show_on_cb' => 'truck_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-	) );
-
-
-	
-	$cmb_demo->add_field( array(
-		'name'         => __( 'address', 'truck' ),
-		'desc'         => __( 'Enter pharmacy address', 'truck' ),
-		'id'           => $prefix . 'address',
-		'type'         => 'text',
-		
-	) );
-
-	$cmb_demo->add_field( array(
-		'name'         => __( 'Latitude', 'truck' ),
-		'desc'         => __( 'Enter address Latitude', 'truck' ),
-		'id'           => $prefix . 'Latitude',
-		'type'         => 'text',
-		
-	) );
-	
-	$cmb_demo->add_field( array(
-		'name'         => __( 'Longitude', 'truck' ),
-		'desc'         => __( 'Enter address Longitude', 'truck' ),
-		'id'           => $prefix . 'Longitude',
-		'type'         => 'text',
-		
-	) );
-
-	
-
-	$cmb_demo->add_field( array(
-		'name'         => __( 'email', 'truck' ),
-		'desc'         => __( 'Enter pharmacy email address', 'truck' ),
-		'id'           => $prefix . 'email',
-		'type'         => 'text',
-		
-	) );
-
-	$cmb_demo->add_field( array(
-		'name'         => __( 'phone', 'truck' ),
-		'desc'         => __( 'Enter pharmacy phone', 'truck' ),
-		'id'           => $prefix . 'phone',
-		'type'         => 'text',
-		
-	) );
-
-	
-
-}
-
-
 /******************************************************************/
 /*--------------------Page Banner -------------------------------*/
 /******************************************************************/
@@ -245,6 +134,7 @@ function truck_register_page_banner_metabox() {
 		'options'          => array(
 			'slider' => __( 'Slider', 'truck' ),
 			'image' => __( 'Image', 'truck' ),
+			'map' => __( 'Map', 'truck' ),
 			
 		),	
 		
@@ -270,6 +160,13 @@ function truck_register_page_banner_metabox() {
 		'id'         => $prefix . 'image',
 		'type'       => 'file',
 	
+	) );
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Google Map', 'truck' ),
+		'desc'       => __( 'Enter Google Map embed code', 'truck' ),
+		'id'         => $prefix . 'map',
+		'type'       => 'textarea_code',
+
 	) );
 
 	$cmb_demo->add_field( array(
