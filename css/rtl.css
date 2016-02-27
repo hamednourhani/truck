@@ -430,14 +430,14 @@ img.wp-smiley,
     display: inline-block; } }
 /* line 21, sass/rtl/layout/_header.scss */
 .site-header div.hero .site-logo-contianer {
-  right: auto;
-  left: 10px;
+  right: 0;
+  left: auto;
   margin-left: 1px;
   margin-right: 10px; }
 /* line 27, sass/rtl/layout/_header.scss */
 .site-header div.hero .lang-container {
-  left: auto;
-  right: 40px; }
+  left: 40px;
+  right: auto; }
 /* line 33, sass/rtl/layout/_header.scss */
 .site-header div.hero .contact-info-bar span i:before {
   margin-right: 10px;
