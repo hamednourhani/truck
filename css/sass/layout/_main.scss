@@ -19,7 +19,7 @@
 
 	}
 }
-.page-template-without-sidebar{
+.page-template-full-width{
 	.site-content {
 		.layout, .primary {
 			margin: 0px;
@@ -48,6 +48,14 @@
 		background: none !important;
 	}
 }
+.page-template-without-sidebar {
+	.primary {
+		@include span-columns(12, 12);
+		@include at-breakpoint($medium) {
+			@include span-columns(12, 12);
+		}
+	}
+}
 
 //-------------site-content-------------------
 
@@ -74,6 +82,7 @@
  			padding-bottom: 15px;
  		}
  		.article-body{
+			overflow: hidden;
  			.featured-image.single-image{
  				@include span-columns(12,12);
 			 	@include at-breakpoint($medium){
@@ -321,7 +330,7 @@
 					background-color: $white;
 				}
 				a{
-					border-bottom : 1px dashed $green;
+					border-bottom : 1px dashed $orang;
 					width : 100%;
 					padding : 5px;
 					display: inline-block;

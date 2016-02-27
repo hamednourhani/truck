@@ -19,9 +19,7 @@
 						<?php while(have_posts()) { the_post(); ?>
 						
 							<article class="hentry">
-								<div class="featured-image single-image">
-									<?php the_post_thumbnail(); ?>
-								</div>
+
 								<header class="article-title">
 									<a href="<?php the_permalink(); ?>">
 										<h3><?php the_title(); ?></h3>
