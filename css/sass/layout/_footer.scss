@@ -2,7 +2,12 @@
 	background-color: $grey3;
 	border-top : 2px solid $orang;
 	overflow : hidden;
-
+	@include at-breakpoint($medium) {
+		background: image-url("footer-back.jpg");
+		background-position : bottom left;
+		background-repeat : no-repeat;
+		background-attachment: fixed;
+	}
 }
 div.footer-widget-area{
 
