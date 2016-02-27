@@ -1226,8 +1226,8 @@ img.wp-smiley,
   /* line 63, sass/layout/_header.scss */
   .site-header div.hero .lang-container {
     position: absolute;
-    top: 0;
-    left: 40px;
+    top: 4px;
+    right: 40px;
     display: inline-block;
     padding: 10px; }
     /* line 69, sass/layout/_header.scss */

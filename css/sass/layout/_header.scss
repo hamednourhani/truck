@@ -42,7 +42,7 @@
 		.site-logo-contianer {
 			position: absolute;
 			top: 5px;
-			left: 0;
+			left: 10px;
 			z-index: 999999;
 			height: 120px;
 			width: 120px;
@@ -62,8 +62,8 @@
 		}
 		.lang-container{
 			position : absolute;
-			top : 0;
-			left : 40px;
+			top : 4px;
+			right : 40px;
 			display : inline-block;
 			padding : 10px;
 			#lang_sel_list ul a.lang_sel_other,

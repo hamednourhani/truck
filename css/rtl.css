@@ -430,8 +430,8 @@ img.wp-smiley,
     display: inline-block; } }
 /* line 21, sass/rtl/layout/_header.scss */
 .site-header div.hero .site-logo-contianer {
-  right: 0;
-  left: auto;
+  right: auto;
+  left: 10px;
   margin-left: 1px;
   margin-right: 10px; }
 /* line 27, sass/rtl/layout/_header.scss */

@@ -73,14 +73,16 @@
 						</a>
 						</div>
 
-					<div class="lang-container">
-						<?php do_action('icl_language_selector'); ?>
-					</div>
+
 
 					<div class="contact-info-bar">
 						<span><i class="fa fa-phone"></i> 021-9-55247678</span>
 						<span><i class="fa fa-envelope"></i>info@shahrak-truck.com</span>
 					</div>
+
+						<div class="lang-container">
+							<?php do_action('icl_language_selector'); ?>
+						</div>
 
 
 
