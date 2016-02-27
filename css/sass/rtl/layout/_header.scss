@@ -1,114 +1,166 @@
 
 // ---------- keyframes---------------------------------
 @include keyframes(move-up) {
-  0%   { opacity : 0;display:none; }
-  100% { opacity : 1;display :inline-block; }
+	0%   { opacity : 0;display:none; }
+	100% { opacity : 1;display :inline-block; }
 }
 @include keyframes(move-down) {
-  0%   { opacity : 1;display : inline-block; }
-  100% { opacity : 0;display : none  }
+	0%   { opacity : 1;display : inline-block; }
+	100% { opacity : 0;display : none  }
 }
 
 @include keyframes(move-slow) {
-  0%   { opacity : 1;display : inline-block; }
-  100% { opacity : 1;display : inline-block  }
+	0%   { opacity : 1;display : inline-block; }
+	100% { opacity : 1;display : inline-block  }
 }
 
+// ---------- site-header---------------------------------
 .site-header{
-	.header-inner {
-		background-position: 5% 100%;
-	}
+
 	div.hero{
-		
-		.lang-container{
-			
-			right : 40px ;
-			left : auto;
-			
+		.site-logo-contianer {
+			right: 0;
+			left: auto;
+			margin-left: 1px;
+			margin-right: 10px;
 		}
-		span.site-desc{
-			font-size : 140%;
+		.lang-container{
+			left : auto;
+			right : 40px;
+		}
+		.contact-info-bar{
+			span {
+				i:before {
+					margin-right: 10px;
+					margin-left: 5px;
+
+				}
+			}
 		}
 	}
 	nav.main-menu{
-		.menu-search-area{
-			left : 30px;
-			right : auto;
-			span#submit{
-				left : 10px;
-				right : auto;
-				top : 4px;
-			}
-			input#s{
-				padding-right : 5px;
-				padding-left : 20px;
+
+		&.scroll-to-fixed-fixed{
+			.site-logo-in-menu{
+				float : right;
 			}
 		}
-		ul.main-nav{
-			text-align: right;
+		/*-------search form-------------------*/
+		.search-form-wrapper{
+			@include at-breakpoint($medium) {
+				right : auto;
+			}
+			.search-area{
+				float : left;
+				span#submit {
+					i:before {
+						margin-left: 1px;
+						margin-right: 5px;
+
+					}
+				}
+			}
 		}
 	}
-	
+	div.menu-icons{
+		text-align: left;
+		float : left;
+	}
+	span.menu-icon{
+		border-right: 1px solid lighten($orang,10%);
+		border-left: 0px;
+		margin-left : -3px;
+		margin-right : 0px;
+
+		&.search-icon{
+			border-left : 1px solid lighten($orang,10%);
+			border-right : 0px;
+		}
+	}
+
 
 }
 ul.main-nav{
 	text-align : right;
-	margin : 0px auto;
+	margin-right : 0px;
+	margin-left : auto;
+
+	@include at-breakpoint($medium){
+		margin-left : auto;
+		margin-right : 120px;
+
+	}
+
+
+
+
 	&>li{
 		@include at-breakpoint($medium){
-			margin-right : auto;
-			margin-left : 10px;
+			margin-right : 0px;
+			margin-left : -3px;
 		}
 		&.fa{
-			font : inherit;
-			font-family: $web_yekan;
-			
+			font-family: $BYekan;
+
 			&:before{
 				font : normal normal normal 14px/1 FontAwesome !important;
-				color : $white;
 			}
 		}
-	}
-	a{
-		font-size: 110%;
-	}	
-	
-	&>li.menu-item-has-children>a:after{
-		@include at-breakpoint($medium){
-	    	left: 30%;
-		    right: auto;
-		    
-	    }
-    	
-	}
-	
-	&>li>ul.sub-menu,li ul.sub-menu{
-		@include at-breakpoint($medium){
-			left : auto;
-			right : -30%;
+		a{
+			@extend .def-transition;
+
+			@include at-breakpoint($medium){
+				border:{
+					left : 0px;
+					right: 1px solid saturate(lighten($orang,10%),10%);
+				}
+			}
+
 		}
-		
-			
+		&:last-child{
+			a{
+				border-left : 0px;
+				@include at-breakpoint($medium){
+					border-left : 1px solid saturate(lighten($orang,10%),10%);
+
+				}
+
+			}
+		}
+
+	}
+	&>li.menu-item-has-children>a:after{
+		@extend .fa;
+		@include at-breakpoint($medium){
+			padding-left: 0px;
+			padding-right: 5px;
+			// width walker added
+			right: auto;
+			left: 45%;
+		}
+	}
+	&>li>ul.sub-menu,li ul.sub-menu{
+
+		@include at-breakpoint($medium){
+			right: -30%;
+			left : auto;
+		}
+
 		li.menu-item-has-children>a:after{
 			@extend .fa;
 			@include at-breakpoint($medium){
-				content: "\f0d9";
-				 left: 12px;
-				 right: auto;
+				left: 12px;
+				right: auto;
 			}
-		    
 		}
 	}
-	
-	
+
 	&>li>ul.sub-menu li ul{
 		@include at-breakpoint($medium){
-			right : 100%;
+			right: 100%;
 			left : auto;
 		}
-		
 	}
-	
 	ul.sub-menu li:hover ul{
 		@include at-breakpoint($medium){
 			right : 100%;

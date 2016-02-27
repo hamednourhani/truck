@@ -1,152 +1,104 @@
 /* main style */
-
-
-
+.site-content{
+	.banner-wrapper{
+		text-align: right;
+	}
+}
 //-------------site-content-------------------
+
 .primary{
- 	@include span-columns(12,12);
- 	@include at-breakpoint($medium){
- 		@include span-columns(10,12);
- 		margin-right: auto;
- 	}
- 	article.hentry{
+	@include span-columns(12,12);
+	@include at-breakpoint($medium){
+		@include span-columns(9,12);
+		margin-right : auto;
+	}
+
+	article.hentry{
+		border-left : 0px;
+		border-right : 2px solid lighten($orang,15%);
 		.article-body{
- 			.featured-image.single-image{
- 				@include span-columns(12,12);
-			 	@include at-breakpoint($medium){
-			 		@include span-columns(4,12);
-			 		margin-right: auto;
-			 	}
- 			}
- 			.excerpt{
+			.featured-image.single-image{
 				@include span-columns(12,12);
-			 	@include at-breakpoint($medium){
-			 		@include span-columns(8 omega,12);
-			 		margin-right: auto;
-			 	}
- 			}
- 		}
-		ul.pharmacy-information-list{
-			i:before{
-				padding-right : none;
-				padding-left : 7px;
+				@include at-breakpoint($medium){
+					@include span-columns(4,12);
+					margin-right : auto;
+				}
+			}
+			.excerpt{
+				@include span-columns(12,12);
+				@include at-breakpoint($medium){
+					@include span-columns(8 omega,12);
+					margin-right : auto;
+				}
 			}
 		}
- 	}
- 	 	
-}
-.grid-excerpt{
-	font-size : 100%;
+		ul.pharmacy-information-list{
+			i:before{
+				padding-left : 7px;
+				padding-right : 1px;
+			}
+		}
+	}
+
+
 }
 .without-sidebar .primary{
 	@include span-columns(12,12);
- 	@include at-breakpoint($medium){
- 		@include span-columns(12,12);
- 		margin-right: auto;
- 	}
-}
-
-/*------------store locator----------------------*/
-#wpsl-search-btn, #wpsl-search-wrap div {
-    margin-right: 10px;
-    float: right;
-}
-#wpsl-search-wrap div label {
-    float: right;
-    margin-left: 10px;
-    margin-right : auto;
-    line-height: 32px;
-}
-#wpsl-result-list {
-    width: 33%;
-    margin-left: .5%;
-    margin-right: auto;
-    float: right;
-    text-align: right;
-}
-#wpsl-gmap {
-    float: left;
-    width: 66.5%;
-}
-.wpsl-direction-index {
-    float: right;
-    width: 8%;
-    margin: 0 0 0 5%;
-}
-.wpsl-direction-txt {
-    float: right;
-    width: 62%;
-}
-.wpsl-direction-distance {
-    float: left;
-    width: 20%;
-    margin: 0 5% 0 0;
+	@include at-breakpoint($medium){
+		@include span-columns(12,12);
+		margin-right : auto;
+	}
 }
 /*------------store locator----------------------*/
 .secondary{
 	@include span-columns(12,12);
- 	@include at-breakpoint($medium){
- 		@include span-columns(2 omega,12);
- 		margin-right: auto;
+	@include at-breakpoint($medium){
+		@include span-columns(3 omega,12);
+		margin-right : auto;
+	}
 
- 	}
 	nav.side-menu{
-		h4.widgettitle{
-			font-size : 18px;
-			i.fa{
-				padding-left : 5px;
-				padding-right : 1px;
-			}
-		}
 		li{
-
 			img{
 				float : right;
-				margin-left : 8px;
 				margin-right : auto;
+				margin-left : 8px;
 			}
 			&.menu-item-object-product_cat>a:after{
 				@extend .fa;
 				@include at-breakpoint($medium){
-					padding-left: 1px;
 					padding-right: 5px;
+					padding-left: 0px;
 					// width walker added
-					position: absolute;
-					content: "\f0da";
+					left: auto;
 					right: 4px;
-					left : auto;
-					top: 18px;
 
 				}
 			}
 		}
 		ul.sub-menu{
 			@include at-breakpoint($medium) {
-				position: absolute;
 				right: auto;
 				left: 100%;
-				display : none;
+				border-right: 4px solid $orang;
+				border-left : 0px;
 			}
 
 
 
 		}
 	}
- 	aside.widget{
- 		font-size: 110%;
- 		&.widget_last_products_widget{
+	aside.widget{
+		&.widget_last_products_widget{
 			li {
-				font-size : 130%;
 				img{
 					margin-left : 10px;
 					margin-right : auto;
 				}
 			}
 		}
+	}
 
- 	}
-	
-	
+
 }
-
 

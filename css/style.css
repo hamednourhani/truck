@@ -2100,9 +2100,9 @@ table.products_list_table {
     text-align: left; }
   /* line 12, sass/modules/_tables.scss */
   table.products_list_table tr th {
-    background-color: #00a7d4;
+    background-color: #f36639;
     color: #FFFFFF;
-    border-bottom: 3px solid #8db63f; }
+    border-bottom: 3px solid #333333; }
   /* line 17, sass/modules/_tables.scss */
   table.products_list_table tr:nth-of-type(2n) {
     background-color: #f6f6f6; }
