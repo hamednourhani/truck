@@ -186,5 +186,43 @@ function truck_register_page_banner_metabox() {
 	
 	
 }
+/******************************************************************/
+/*--------------------Intro page Links -------------------------------*/
+/******************************************************************/
+//add_action( 'cmb2_init', 'truck_register_intro_links_metabox' );
+//function truck_register_intro_links_metabox() {
+//
+//	$prefix = '_truck_';
+//
+//	/**
+//	 * Sample metabox to demonstrate each field type included
+//	 */
+//	$cmb_demo = new_cmb2_box( array(
+//			'id'            => $prefix . 'intro_links',
+//			'title'         => __( 'Language Links', 'truck' ),
+//			'object_types'  => array( 'page' ), // Post type
+//
+//	) );
+//
+//
+//
+//	$cmb_demo->add_field( array(
+//			'name'         => __( 'English', 'truck' ),
+//			'desc'         => __( 'Enter English web site Url', 'truck' ),
+//			'id'           => $prefix . 'en_link',
+//			'type'         => 'text_url',
+//
+//	) );
+//	$cmb_demo->add_field( array(
+//			'name'         => __( 'Persian', 'truck' ),
+//			'desc'         => __( 'Enter Persian web site Url', 'truck' ),
+//			'id'           => $prefix . 'fa_link',
+//			'type'         => 'text_url',
+//
+//	) );
+//
+//
+//
+//}
 
 

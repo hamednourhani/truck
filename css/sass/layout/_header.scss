@@ -33,6 +33,7 @@
 				height : 100%;
 				max-height : 100%;
 				width : auto;
+				margin-top : 8px;
 			}
 			@include at-breakpoint($medium){
 				display : none;
@@ -43,9 +44,10 @@
 			top: 5px;
 			left: 0;
 			z-index: 999999;
-			height: 115px;
-			width: 115px;
+			height: 120px;
+			width: 120px;
 			display :none;
+			margin-top : 5px;
 			@include at-breakpoint($medium) {
 				display : block;
 			}
@@ -97,6 +99,8 @@
 		background-color: $orang;
 		width : 100%;
 		position : relative;
+		border-bottom: 3px dashed #a88282;
+		border-top: 3px dashed #333333;
 
 		.site-logo-in-menu {
 			height : 45px;
@@ -112,6 +116,38 @@
 			.site-logo-in-menu{
 				display: inline-block;
 				float : left;
+			}
+		}
+		/*-------search form-------------------*/
+		.search-form-wrapper{
+			display: none;
+			position : absolute;
+			top : 100%;
+			right : 0;
+			left : 0;
+			width : 100%;
+
+			height : auto;
+			background-color: $orang;
+			z-index: 99999;
+			padding : 15px;
+			border-radius : 0px;
+			@include at-breakpoint($medium) {
+				left : auto;
+				width : auto;
+				max-width : 100%;
+				@include border-bottom-radius(10px);
+			}
+			.search-area{
+				float : right;
+				span#submit {
+					cursor: pointer;
+					i:before {
+						margin-left: 5px;
+						color: $white;
+
+					}
+				}
 			}
 		}
 	}
@@ -131,9 +167,10 @@
 		border-left : 1px solid lighten($orang,10%);
 		border-bottom : 1px solid lighten($orang,10%);
 		cursor: pointer;
-		z-index:999998;
+		//z-index:999998;
+		margin-right : -3px;
 		&:hover{
-			background-color: lighten($orang,5%);
+			background-color: desaturate(darken($orang,5%),20%);
 		}
 
 		@include at-breakpoint($medium){
@@ -151,6 +188,7 @@
 			}
 		}
 		&.search-icon{
+			border-right : 1px solid lighten($orang,10%);
 			@include at-breakpoint($medium){
 				display: inline-block;
 			}
@@ -189,7 +227,7 @@ ul.main-nav{
 		display: block;
 		@include at-breakpoint($medium){
 			display: inline-block;
-			margin-right : 0px;
+			margin-right : -3px;
 			margin-left : 0px;
 		}
 		position : relative;
@@ -211,12 +249,12 @@ ul.main-nav{
 			@include at-breakpoint($medium){
 				padding: 15px 10px;
 				border:{
-					left : 1px solid lighten($orang,10%);
+					left : 1px solid saturate(lighten($orang,10%),10%);
 				}
 			}
     		display: inline-block;
     		&:hover{
-    			background-color : lighten($orang , 5%);
+    			background-color : desaturate(darken($orang,5%),20%);
     		}
 
 		}
@@ -224,7 +262,7 @@ ul.main-nav{
 			a{
 				border-right : 0px;
 				@include at-breakpoint($medium){
-					border-right : 1px solid lighten($orang,10%);
+					border-right : 1px solid saturate(lighten($orang,10%),10%);
 
 				}
 
@@ -232,7 +270,7 @@ ul.main-nav{
 		}
 		&.current_page_item{
 			&>a{
-				background-color : lighten($orang , 5%);
+				background-color : desaturate(darken($orang,5%),20%);
 			}
 		}
 		
@@ -297,7 +335,7 @@ ul.main-nav{
 				background-color: $orang;
 				&:hover{
 					//color : $white;
-					 background-color : lighten($orang,5%);
+					 background-color : desaturate(darken($orang,5%),20%);
 				}
 			}
 		}

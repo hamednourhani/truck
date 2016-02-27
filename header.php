@@ -60,7 +60,7 @@
 						<div class="site-logo-for-tablet">
 
 							<a class="site-url" href="<?php echo get_bloginfo('url'); ?>">
-								<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
+								<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck-100.png" alt="<?php echo get_bloginfo('url'); ?>"/>
 
 							</a>
 						</div>
@@ -95,7 +95,7 @@
 					<section class="layout">
 
 						<div class="site-logo-in-menu">
-							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck.png" alt="<?php echo get_bloginfo('url'); ?>"/>
+							<img class="site-logo" src="<?php echo get_template_directory_uri();?>/images/shahrak-truck-plain.png" alt="<?php echo get_bloginfo('url'); ?>"/>
 						</div>
 
 						<div class="menu-icons">
@@ -106,6 +106,12 @@
 								<i class="fa fa-search"></i>
 							</span>
 
+						</div>
+
+						<div class="search-form-wrapper">
+							<div class="search-area">
+								<?php echo truck_menu_search_form(); ?>
+							</div>
 						</div>
 
 						<?php wp_nav_menu(array(
@@ -123,9 +129,8 @@
 	    					         'fallback_cb' => ''                             // fallback function (if there is one)
 							)); ?>
 
-<!--							<div class="menu-search-area">-->
-<!--								--><?php //echo truck_menu_search_form(); ?>
-<!--							</div>-->
+
+
 
 
 					</section>

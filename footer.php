@@ -12,12 +12,12 @@
 
 				<div class="credit-holder">
 					<section class="layout">
-						<ul class="socials">
-							<li><a href="#" class="social-icon facebook"></a></li>
-							<li><a href="#" class="social-icon instagram"></a></li>
-							<li><a href="#" class="social-icon linkedin"></a></li>
-							<li><a href="#" class="social-icon gplus"></a></li>
-						</ul>
+<!--						<ul class="socials">-->
+<!--							<li><a href="#" class="social-icon facebook"></a></li>-->
+<!--							<li><a href="#" class="social-icon instagram"></a></li>-->
+<!--							<li><a href="#" class="social-icon linkedin"></a></li>-->
+<!--							<li><a href="#" class="social-icon gplus"></a></li>-->
+<!--						</ul>-->
 						
 						<span class="site-holder">
 							<?php echo __('Designed by','truck').'<a href="http://Karait.com">'.' '.__('Farakaranet','truck').'</a>'; ?>
@@ -32,7 +32,8 @@
 					</section>
 				</div>
 			</footer>
-	
+
+
 	
 	
 
