@@ -377,7 +377,7 @@ class contact_info_widget extends WP_Widget {
         $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','truck').$address.'</p>';
         $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','truck').$phone.'</p>';
         $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','truck').$fax.'</p>';
-        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','truck').$email.'</p>';
+        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','truck').'<span style="display:inline-block;">'.$email.'</span>'.'</p>';
         $content .= '</main>';
       
         // before and after widget arguments are defined by themes
