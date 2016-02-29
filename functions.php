@@ -438,11 +438,11 @@ class contact_info_widget extends WP_Widget {
 
          <p>
             <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $telfax ); ?>" />
+            <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax :','truck' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $telfax ); ?>" />
+            <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $fax ); ?>" />
         </p>
 
 

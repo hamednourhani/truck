@@ -60,54 +60,7 @@ div.footer-widget-area{
 	min-height : 50px;
 	background-color: lighten($grey3,2%);
 
-	.socials{
-		float : none;
-		margin: 0px;
-		text-align : center;
-		display: block;
-		
-		padding : 5px;
-		@include at-breakpoint($medium) {
-			float : left;
-				display : inline-block;
-		}
-		li{
-			display : inline-block;
-		
-			.social-icon{
-				@extend .def-transition;
-				background: image-url("social-icons.png");
-				display: block;
-				width : 30px;
-				height : 30px;
-				&.facebook{
-					background-position: -0px 30px;
-					&:hover{
-						background-position: -0px 0px;
-					}
-				}
-				&.instagram{
-					background-position: -32px 30px;
-					&:hover{
-						background-position: -32px 0px;
-					}
-				}
-				&.linkedin{
-					background-position: -64px 30px;
-					&:hover{
-						background-position: -64px 0px;
-					}
-				}
-				&.gplus{
-					background-position: -96px 30px;
-					&:hover{
-						background-position: -96px 0px;
-					}
-				}
-			}
-		}
 
-	}
 	span.credit{
 		display: inline-block;
 		padding : 5px;

@@ -703,6 +703,11 @@ ul.main-nav {
   .secondary aside.widget.widget_last_products_widget li img {
     margin-left: 10px;
     margin-right: auto; }
+  /* line 162, sass/rtl/layout/_main.scss */
+  .secondary aside.widget.widget_contact_info_widget i:before {
+    margin-right: auto;
+    margin-left: 10px;
+    color: #f36639; }
 
 /* line 4, sass/rtl/layout/_footer.scss */
 div.footer-widget-area .footer-col1,
