@@ -24,7 +24,7 @@
 		.layout, .primary {
 			margin: 0px;
 			padding: 0px;
-			width: 100%;
+			width: 100% !important;
 			height: 100%;
 			max-width: 100%;
 		}
@@ -42,6 +42,13 @@
 	background-attachment: fixed;
 	header,footer{
 		display : none;
+	}
+	.primary {
+		margin: 0px;
+		padding: 0px;
+		width: 100% !important;
+		height: 100%;
+		max-width: 100%;
 	}
 	article.hentry{
 		border: 0px !important;
