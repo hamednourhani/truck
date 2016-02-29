@@ -1931,9 +1931,9 @@ ul.main-nav {
     /* line 1, sass/layout/_footer.scss */
     .site-footer {
       background: url('../images/footer-back.jpg?1456570229');
-      background-position: bottom left;
+      background-position: top left;
       background-repeat: no-repeat;
-      background-attachment: fixed; } }
+      background-attachment: scroll; } }
 
 /* line 12, sass/layout/_footer.scss */
 div.footer-widget-area {

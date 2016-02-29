@@ -4,9 +4,9 @@
 	overflow : hidden;
 	@include at-breakpoint($medium) {
 		background: image-url("footer-back.jpg");
-		background-position : bottom left;
+		background-position : top left;
 		background-repeat : no-repeat;
-		background-attachment: fixed;
+		background-attachment: scroll;
 	}
 }
 div.footer-widget-area{
