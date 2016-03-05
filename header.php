@@ -40,7 +40,7 @@
 
 </head>
 
-<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" oncontextmenu="return false">
 
 	
 	<div class="body-wrapper">
